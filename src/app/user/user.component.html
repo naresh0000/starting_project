@@ -1,0 +1,35 @@
+<!-- <div>
+    <button>
+        <img src="assets/Baba.jpeg" alt="Baba"/>
+        <span>BABA</span>
+    </button>
+    <button>
+        <img src="assets/Rupa.png" alt="Rupa"/>
+        <span>Simham  ra ma rupa</span>
+    </button>
+    <button>
+        <img src="assets/Naru.jpeg" alt="Naresh"/>
+        <span>Naresh</span>
+    </button>
+    <button>
+        <img src="assets/iche.jpeg" alt="iche"/>
+        <span>iche</span>
+    </button>
+    <button>
+        <img src="assets/Rupa.jpeg" alt="Rupa"/>
+        <span>RUPS</span>
+    </button>
+</div> -->
+<!-- <div>
+    <button>
+        <img src="assets/Baba.jpeg" alt="Baba"/>
+        <span>{{selectedUser.name}}</span>
+    </button> -->
+    <div *ngIf="selectedUser">
+        <button>
+            <img [src]="selectedUser.avatar" [alt]="selectedUser.name" />
+            <span>{{ selectedUser.name }}</span>
+        </button>
+        <button (click)="getRandomUser()">Press me</button>
+    </div>
+    
